@@ -1,0 +1,56 @@
+:root {
+    --border-color: black;
+    --black-cell-color: black;
+    --white-cell-color: white;
+    --red-piece-color: red;
+    --blue-piece-color: blue;
+    --cell-hover-color: violet;
+    --cell-size: 70px;
+    --piece-size: 60px;
+    --piece-radius: 30px;
+    --font-color: white;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#gamescreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8rem;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+}
+
+.cell-container {
+    display: flex;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--cell-size);
+    width: var(--cell-size);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+}
+
+.blue-piece {
+    height: var(--piece-size);
+    width: var(--piece-size);
+    background: var(--blue-piece-color);
+    border-radius: var(--piece-radius);
+}
+
+.red-piece {
+    height: var(--piece-size);
+    width: var(--piece-size);
+    background: var(--red-piece-color);
+    border-radius: var(--piece-radius);
+}
