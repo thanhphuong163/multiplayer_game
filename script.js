@@ -344,49 +344,49 @@ function give_cells_click() {
   if (selected_piece.seventh_space) {
     cells[selected_piece.index_of_board_piece + 7].setAttribute(
       "onclick",
-      "makeMove(7)",
+      "make_move(7)",
     );
   }
   if (selected_piece.ninth_space) {
     cells[selected_piece.index_of_board_piece + 9].setAttribute(
       "onclick",
-      "makeMove(9)",
+      "make_move(9)",
     );
   }
   if (selected_piece.fourteenth_space) {
     cells[selected_piece.index_of_board_piece + 14].setAttribute(
       "onclick",
-      "makeMove(14)",
+      "make_move(14)",
     );
   }
   if (selected_piece.eighteenth_space) {
     cells[selected_piece.index_of_board_piece + 18].setAttribute(
       "onclick",
-      "makeMove(18)",
+      "make_move(18)",
     );
   }
   if (selected_piece.minus_seventh_space) {
     cells[selected_piece.index_of_board_piece - 7].setAttribute(
       "onclick",
-      "makeMove(-7)",
+      "make_move(-7)",
     );
   }
   if (selected_piece.minus_ninth_space) {
     cells[selected_piece.index_of_board_piece - 9].setAttribute(
       "onclick",
-      "makeMove(-9)",
+      "make_move(-9)",
     );
   }
   if (selected_piece.minus_fourteenth_space) {
     cells[selected_piece.index_of_board_piece - 14].setAttribute(
       "onclick",
-      "makeMove(-14)",
+      "make_move(-14)",
     );
   }
   if (selected_piece.minus_eighteenth_space) {
     cells[selected_piece.index_of_board_piece - 18].setAttribute(
       "onclick",
-      "makeMove(-18)",
+      "make_move(-18)",
     );
   }
 }
@@ -419,11 +419,11 @@ function make_move(number) {
     }
   }
 
-  let indexOfPiece = selected_piece.index_of_board_piece;
+  let idx_of_piece = selected_piece.index_of_board_piece;
   if (number === 14 || number === -14 || number === 18 || number === -18) {
-    change_data(indexOfPiece, indexOfPiece + number, indexOfPiece + number / 2);
+    change_data(idx_of_piece, idx_of_piece + number, idx_of_piece + number / 2);
   } else {
-    change_data(indexOfPiece, indexOfPiece + number);
+    change_data(idx_of_piece, idx_of_piece + number);
   }
 }
 
